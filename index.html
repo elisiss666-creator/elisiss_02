@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff7df">
+  <title>天秤之城：平行時空</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header id="statusHeader" class="status-header hidden" aria-label="城市狀態">
+      <button class="brand" data-action="go-map" aria-label="回到城市地圖">
+        <span class="brand-mark">⚖️</span>
+        <span><strong>天秤之城</strong><small>平行時空</small></span>
+      </button>
+      <div class="meters">
+        <div class="meter meter-fair" title="做決定前，先找線索，也要公平對待每個人">
+          <span class="meter-icon">⚖️</span>
+          <span class="meter-copy"><b>公平規則</b><i><span id="fairFill"></span></i></span>
+          <strong id="fairValue">6</strong>
+        </div>
+        <div class="meter meter-care" title="想一想別人的心情和需要">
+          <span class="meter-icon">❤️</span>
+          <span class="meter-copy"><b>關心別人</b><i><span id="careFill"></span></i></span>
+          <strong id="careValue">6</strong>
+        </div>
+        <div class="meter meter-order" title="讓規則做得到，也讓大家保持安全">
+          <span class="meter-icon">🛡️</span>
+          <span class="meter-copy"><b>安全秩序</b><i><span id="orderFill"></span></i></span>
+          <strong id="orderValue">6</strong>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="round-button" id="soundButton" data-action="toggle-sound" aria-label="開關音效">🔊</button>
+        <button class="round-button" data-action="reset" aria-label="重新開始">↻</button>
+      </div>
+    </header>
+
+    <main id="game" tabindex="-1" aria-live="polite"></main>
+
+    <div id="toast" class="toast" role="status"></div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
